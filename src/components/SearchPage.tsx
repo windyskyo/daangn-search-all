@@ -185,13 +185,18 @@ export default function SearchPage() {
             onKeyDown={handleKeyDown}
             autoComplete="off"
           />
-          <button
-            className="btn-search"
-            onClick={doSearch}
-            disabled={searching}
-          >
-            {searching ? '검색 중…' : '🔍 전국검색'}
-          </button>
+          {searching ? (
+            <button
+              className="btn-search btn-stop"
+              onClick={() => { abortedRef.current = true }}
+            >
+              ⏹ 중지
+            </button>
+          ) : (
+            <button className="btn-search" onClick={doSearch}>
+              🔍 전국검색
+            </button>
+          )}
         </div>
         <div className="search-status">
           {searching && <span className="spin" />}
@@ -228,7 +233,7 @@ export default function SearchPage() {
             <a
               key={i}
               className="card"
-              href={a.href ?? '#'}
+              href={a.href ? (a.href.startsWith('http') ? a.href : `https://www.daangn.com${a.href}`) : '#'}
               target="_blank"
               rel="noopener noreferrer"
             >

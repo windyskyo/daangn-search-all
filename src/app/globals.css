@@ -23,6 +23,8 @@ header h1{color:#fff;font-size:20px;font-weight:800;flex:1}
 .btn-search:hover{background:#e56200}
 .btn-search:active{transform:scale(.97)}
 .btn-search:disabled{background:#ccc;cursor:default}
+.btn-stop{background:#e53e3e}
+.btn-stop:hover{background:#c53030}
 .search-status{max-width:740px;margin:8px auto 0;font-size:13px;color:#888;min-height:20px}
 
 /* ── 스핀 */
