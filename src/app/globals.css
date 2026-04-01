@@ -25,6 +25,10 @@ header h1{color:#fff;font-size:20px;font-weight:800;flex:1}
 .btn-search:disabled{background:#ccc;cursor:default}
 .btn-stop{background:#e53e3e}
 .btn-stop:hover{background:#c53030}
+
+/* ── 프로그레스 바 */
+.progress-bar-wrap{max-width:740px;margin:8px auto 0;height:4px;background:#f0e8e0;border-radius:2px;overflow:hidden}
+.progress-bar{height:100%;background:#FF6F0F;border-radius:2px;transition:width .3s ease}
 .search-status{max-width:740px;margin:8px auto 0;font-size:13px;color:#888;min-height:20px}
 
 /* ── 스핀 */
